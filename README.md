@@ -1,8 +1,6 @@
 # cert127
 
-`cert127` / There is no place like 127.0.0.1
-
-Small utility to generate **🔒 trusted** self-signed certificates for local development.
+Small utility to generate **🔒 trusted** self-signed certificates for local development. _There is no place like 127.0.0.1 🏠_
 
 ## Prerequisites
 
@@ -26,7 +24,35 @@ import cert127 from 'cert127';
 const { key, cert } = await cert127();
 ```
 
-## ✨Roadmap
+## Example
+
+Let's create a quick Fastify server with the listening socket configured for TLS:
+
+```ts
+import cert127 from 'cert127';
+import Fastify from 'fastify';
+
+/**
+ * Run the server!
+ */
+const start = async () => {
+  const fastify = Fastify({ https: await cert127() });
+
+  fastify.get('/secure', (req, reply) =>
+    reply.send("There is no place like 127.0.0.1 🏠"));
+
+  await fastify.listen({ port: 3000 });
+};
+
+void start();
+```
+
+Now you can open [https://localhost:3000/secure](https://localhost:3000/secure) in your browser and see:
+> There is no place like 127.0.0.1 🏠
+
+> **IMPORTANT: This will not work on production, as it is meant only for local development.**
+
+## ✨ Roadmap
 
 - [ ] Make it a class, so we offer more ways to retrieve the cert
 - [ ] Add a check to see if `mkcert` is installed and if not, install it
@@ -39,5 +65,4 @@ const { key, cert } = await cert127();
 - [ ] Add tests
 - [ ] Add CI/CD
 - [ ] Add ESLint and Prettier
-
-_There is no place like 127.0.0.1 🏠_
+- [ ] Add sync method
