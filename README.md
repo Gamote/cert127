@@ -1,6 +1,8 @@
 # cert127
 
-Small utility to generate **🔒 trusted** self-signed certificates for local development. _There is no place like 127.0.0.1 🏠_
+[![npm version](https://img.shields.io/npm/v/cert127)](https://www.npmjs.com/package/cert127) [![npm downloads/month](https://img.shields.io/npm/dm/cert127)](https://www.npmjs.com/package/cert127) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Gamote/cert127/blob/main/LICENSE)
+
+Small utility to generate **🔒 trusted** self-signed certificates for local development.
 
 ## Prerequisites
 
