@@ -1,0 +1,26 @@
+{
+  "name": "makecert",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": "David Gamote",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gamote/makecert.git"
+  },
+  "keywords": ["makecert", "certificate", "ssl", "https", "tls", "local", "development", "mkcert"],
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9"
+  }
+}
