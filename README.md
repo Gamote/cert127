@@ -56,7 +56,7 @@ Now you can open [https://localhost:3000/secure](https://localhost:3000/secure) 
 
 ## ✨ Roadmap
 
-- [ ] Try to include the `mkcert` binary in the package, so that it can be used without installing it on the system.
+- [ ] Try to include the `mkcert` binary in the package, so that it can be used without installing it on the system. (check `node-pre-gyp`)
 - [ ] Make it a class, so we offer more ways to retrieve the cert
 - [ ] Add a check to see if `mkcert` is installed and if not, install it
 - [ ] Make sure that `mkcert` was initialized: `mkcert -install`
